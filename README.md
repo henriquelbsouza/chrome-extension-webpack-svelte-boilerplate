@@ -2,6 +2,9 @@
 
 I am starting a new project and had to create a boilerplate for Webpack and Svelte chrome extension, so I decided to share the boilerplate.
 
+Note that this boilerplate also includes: ESLint and Less, they are ready to use. 
+It should be easy to remove if you don't need them, just uninstall from package.json and remove from webpack config files.
+
 ## Start Here
 
 - [Installing Dependencies](#installing-dependencies)
