@@ -1,7 +1,6 @@
 const { resolve } = require( 'path' );
 const HtmlWebpackPlugin = require( 'html-webpack-plugin' );
 const webpack = require( 'webpack' );
-const { CleanWebpackPlugin } = require( 'clean-webpack-plugin' );
 const MiniCssExtractPlugin = require( 'mini-css-extract-plugin' );
 const { version } = require( './package.json' );
 const CopyWebpackPlugin = require( 'copy-webpack-plugin' );
@@ -14,7 +13,8 @@ module.exports = {
   entry: './main.js',
   output: {
     path: resolve( __dirname, 'dist' ),
-    filename: 'app.[chunkhash].js'
+    filename: 'app.[chunkhash].js',
+    clean: true
   },
   module: {
     rules: [
@@ -71,7 +71,6 @@ module.exports = {
       meta: { version },
       template: resolve( __dirname, 'src', 'index.html' )
     } ),
-    new CleanWebpackPlugin(),
     new CopyWebpackPlugin( {
       patterns: [
         { from: resolve( __dirname, 'src', 'manifest.json' ), to: resolve( __dirname, 'dist' ) }
