@@ -26,5 +26,9 @@
     "webpack-cli": "^4.8.0",
     "webpack-merge": "^5.8.0"
   },
-  "dependencies": {}
+  "dependencies": {},
+  "engines": {
+    "node": ">=14.17.4",
+    "npm": ">=6.14.0"
+  }
 }
