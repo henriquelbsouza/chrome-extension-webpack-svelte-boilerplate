@@ -10,10 +10,13 @@ console.log( { version } );
 
 module.exports = {
   context: resolve( __dirname, 'src' ),
-  entry: './main.js',
+  entry: {
+    main: './main.js',
+    background: './background.js'
+  },
   output: {
     path: resolve( __dirname, 'dist' ),
-    filename: 'app.[chunkhash].js',
+    filename: '[name].js',
     clean: true
   },
   module: {

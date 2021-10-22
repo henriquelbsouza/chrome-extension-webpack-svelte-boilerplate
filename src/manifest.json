@@ -1,12 +1,17 @@
 {
-  "name": "Counter App",
+  "name": "Chrome Extension with Svelte Boilerplate",
   "version": "1.0",
-  "description": "Counter example app",
+  "description": "Chrome Extension with Svelte Boilerplate",
   "permissions": [
-    "activeTab"
+    "notifications",
+    "storage",
+    "alarms"
   ],
-  "browser_action": {
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
     "default_popup": "index.html"
   },
-  "manifest_version": 2
+  "manifest_version": 3
 }
